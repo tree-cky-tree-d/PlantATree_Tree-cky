@@ -1,0 +1,7 @@
+{
+    "name": "PlantATree",
+    "short_name": "PATree",
+    "lang": "en-UK",
+    "start_url": "/index.html",
+    "display": "standalone"
+  }
