@@ -1,0 +1,29 @@
+.carousel {
+  margin:auto;
+  height:50%;
+}
+
+img{
+  max-height: 94.3vh;
+}
+
+.carousel-control-next,
+.carousel-control-prev{
+  width:40px;
+  transition: 0.6s ease;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-caption{
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+
+.carousel-caption:hover{
+  background-color: rgba(0,0,0,0.8);
+}
