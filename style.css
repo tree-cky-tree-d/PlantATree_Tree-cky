@@ -28,10 +28,20 @@ img{
   background-color: rgba(0,0,0,0.8);
 }
 
-.card-body{
+.card-body {
 	display:flex;
 	flex-direction:column;
 }
 button.btn{
 	margin-top: auto;
+}
+
+.col-sm{
+
+}
+
+.card_container{
+  margin-left: 20%;
+  margin-right: 10%;
+
 }
