@@ -27,3 +27,11 @@ img{
 .carousel-caption:hover{
   background-color: rgba(0,0,0,0.8);
 }
+
+.card-body{
+	display:flex;
+	flex-direction:column;
+}
+button.btn{
+	margin-top: auto;
+}
