@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\images",
-    "\\scripts"
+    "\\views",
+    "\\views\\product"
   ],
-  "SelectedNode": "\\type.html",
+  "SelectedNode": "\\views\\product\\add.ejs",
   "PreviewInSolutionExplorer": false
 }

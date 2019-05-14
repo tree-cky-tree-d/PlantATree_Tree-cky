@@ -1,0 +1,57 @@
+
+
+<% if (messages.error) { %>
+	<p style="color:red"><%- messages.error %></p>
+<% } %>
+
+<% if (messages.success) { %>
+	<p style="color:green"><%- messages.success %></p>
+<% } %>
+
+
+<h1><%= title %></h1>
+<form action="/product/add" method="post" name="form1">
+	<table width="25%" border="0">
+		<tr> 
+			<td>Tree Name</td>
+			<td><input type="text" name="name" id="name" value="" /></td>
+		</tr>
+		<tr> 
+			<td>Price</td>
+			<td><input type="text" name="price" value="" /></td>
+		</tr>
+		<tr> 
+			<td>Description</td>
+			<td><input type="text" name="description" value="" /></td>
+		</tr>
+		<tr> 
+			<td>Category</td>
+			<td><input type="text" name="category" value="" /></td>
+		</tr>
+		<tr> 
+			<td>Conditions Of Place</td>
+			<td><input type="text" name="conditionsOfPlace" value="" /></td>
+		</tr>
+		<tr> 
+			<td>Maintance Requirements</td>
+			<td><input type="text" name="maintanceRequirements" value="" /></td>
+		</tr>
+		<tr> 
+			<td>Max Height</td>
+			<td><input type="text" name="maxHeight" value="" /></td>
+		</tr>
+		<tr> 
+			<td>Growth Rate</td>
+			<td><input type="text" name="growthRate" value="" /></td>
+		</tr>
+		<tr> 
+			<td>Image URL</td>
+			<td><input type="text" name="imageURL" value="" /></td>
+		</tr>
+		
+		<tr> 
+			<td></td>
+			<td><input type="submit" name="Submit" value="Add" /></td>
+		</tr>
+	</table>
+</form>
