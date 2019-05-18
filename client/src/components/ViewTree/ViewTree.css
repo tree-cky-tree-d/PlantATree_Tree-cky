@@ -1,0 +1,11 @@
+.View-Tree-Wrapper {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Tree-Details {
+	width: 500px;
+}

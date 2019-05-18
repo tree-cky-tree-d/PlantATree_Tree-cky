@@ -1,0 +1,27 @@
+.Action-Button {
+  width: 45px;
+  height: 40px;
+  background-color: #3833A5;
+  color: #fff;
+  border: none;
+  margin: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.Product-Card {
+  float: left;
+  display: inline-block;
+  width: 240px;
+  margin: 5% 1% 5% 1%;
+}
+
+.Product-Image {
+  height: 280px;
+  overflow: hidden;
+}
+
+.Product-Card:hover {
+  transform: scale(1.1);
+}
