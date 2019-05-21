@@ -40,6 +40,11 @@ class Navbar extends Component {
                   <MDBIcon fab icon="google-plus-g" />
                 </MDBNavLink>
               </MDBNavItem>
+              <MDBNavItem>
+                <MDBNavLink className="waves-effect waves-light" to="/cart">
+                  <MDBIcon fas icon="shopping-cart" />
+                </MDBNavLink>
+              </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBContainer>

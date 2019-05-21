@@ -12,6 +12,7 @@ app.use(require('cors')());
 app.use(require('helmet')());
 
 app.use('/api/trees', require('./routes/trees'));
+app.use('/api/cart', require('./routes/cart'));
 
 // Production
 if (process.env.NODE_ENV === 'production') {
