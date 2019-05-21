@@ -1,0 +1,21 @@
+.Cart-Tree-Wrapper {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .Total-Tree-Wrapper {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 40%;
+  }
+
+  .CartImage {
+      max-height: 400px;
+      min-height: 400px;
+  }

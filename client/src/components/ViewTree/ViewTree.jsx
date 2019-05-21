@@ -77,6 +77,24 @@ class ViewTree extends Component {
     }
   };
 
+  handleSubmitTree = async (e) => {
+    e.preventDefault();
+    try {
+        axios.post(`/api/cart/added`, {
+        id: this.state.id,
+        name: this.state.name,
+        price: this.state.price,
+        imageURL: this.state.imageURL,
+        quantity: 1
+      });
+
+      this.setState({ response: "Tree added" });
+    } catch (err) {
+      this.setState({ response: err.message });
+    }
+  }
+
+
   render() {
     if (this.state.response === "Tree not found!")
       return <h1>Tree not found!</h1>
@@ -108,13 +126,17 @@ class ViewTree extends Component {
             <strong>Growth Rate:</strong><br />
             { this.state.growthRate }<br /><br />
             <MDBRow>
-              <MDBBtn className=""> Add to Cart</MDBBtn>
+              <form onSubmit={this.handleSubmitTree}>
+              <MDBBtn className="" type="submit"> Add to Cart</MDBBtn>
+              </form>
               <MDBNavLink to="/"><MDBBtn>Back</MDBBtn></MDBNavLink>
             </MDBRow>
+            { this.state.response }
           </MDBCol>
         </MDBRow>
       </MDBContainer>
     );
+    
   }
 }
 
