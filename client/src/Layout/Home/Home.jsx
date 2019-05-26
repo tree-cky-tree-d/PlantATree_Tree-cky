@@ -8,6 +8,7 @@ import { MDBContainer } from "mdbreact";
 // Components
 import Tree from "../../components/Tree/Tree";
 import SearchTrees from "../../components/SearchTrees/SearchTrees";
+import Filter from "../../components/Filter/Filter";
 import Carousel from "../Carousel/Carousel";
 
 class Home extends Component {
@@ -39,7 +40,6 @@ class Home extends Component {
   searchTrees = async treename => {
     let allTrees = [...this.state.data.trees];
     if (this.state.allTrees === null) this.setState({ allTrees });
-
     let trees = this.state.data.trees.filter(({ name }) =>
       name.toLowerCase().includes(treename.toLowerCase())
     );
@@ -48,6 +48,21 @@ class Home extends Component {
     if (treename.trim() === "")
       this.setState({ data: { trees: this.state.allTrees } });
   };
+
+  filter = async treename => {
+    let allTrees = [...this.state.data.trees];
+    if (this.state.allTrees === null) this.setState({ allTrees });
+    alert(`You chose the ${this.Filter.radio} pizza.`);
+    let trees = this.state.data.trees.filter(({ name }) =>
+      name.toLowerCase().includes(treename.toLowerCase())
+    );
+    if (trees.length > 0) this.setState({ data: { trees } });
+
+    if (treename.trim() === "")
+      this.setState({ data: { trees: this.state.allTrees } });
+  };
+
+
 
   render() {
     let trees;
@@ -78,6 +93,8 @@ class Home extends Component {
             totam voluptas nostrum quisquam eum porro a pariatur veniam.
           </p>
           <SearchTrees className="Search-Bar" SearchTrees={this.searchTrees} />
+        
+          <Filter className="Filter-Bar" Filter={this.Filter} />
           <MDBContainer>
               {trees}
           </MDBContainer>

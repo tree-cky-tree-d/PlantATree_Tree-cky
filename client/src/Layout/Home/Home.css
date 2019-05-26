@@ -11,6 +11,11 @@
   justify-content: center;
 }
 
+.Filter-Bar {
+  display: flex;
+  justify-content: right;
+}
+
 .No-Trees {
   font-weight: bold;
   text-align: center;

@@ -12,13 +12,16 @@ class SearchTrees extends Component {
 
   render() {
     return (
+ 
       <input
         type="text"
-        placeholder="Search by name..."
+        placeholder="Search by"
         name="name"
         onChange={ this.onChangeHandler }
         className="Search-Tree-Input"
       />
+ 
+
     );
   }
 }
