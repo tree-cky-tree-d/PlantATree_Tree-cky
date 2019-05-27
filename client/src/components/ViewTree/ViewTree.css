@@ -9,3 +9,18 @@
 .Tree-Details {
 	width: 500px;
 }
+
+
+@media (min-width: 42em) {
+  .Tree-Image {
+  	margin-left: 40%;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 42em) {
+	.Tree-Details {
+		
+  		margin-left: 5%;
+	}
+}

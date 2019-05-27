@@ -8,6 +8,7 @@ import Add from "../Layout/Add/Add";
 import Edit from "../Layout/Edit/Edit";
 import ViewTree from "../Layout/ViewTree/ViewTree";
 import Cart from "../Layout/Cart/Cart";
+import LandscapeMockup from "../Layout/LandscapeMockup/LandscapeMockup"; 
 import Footer from "../Layout/Footer/Footer";
 
 const Routes = () => {
@@ -20,6 +21,7 @@ const Routes = () => {
           <Route path="/edit" component={ Edit } exact />
           <Route path="/view" component={ ViewTree } exact />
           <Route path="/cart" component={ Cart } exact />
+          <Route path="/landscapemockup" component={ LandscapeMockup } exact />
         </Switch>
         <br />
         <br />

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "./SearchTrees.css";
+import "./FilterTreesByPrice.css";
 
-class SearchTrees extends Component {
+class FilterTreesByPrice extends Component {
   state = { value: "" };
 
   onChangeHandler = e => {
     this.setState({ value: e.target.value }, () => {
-      this.props.SearchTrees(this.state.value);
+      this.props.FilterTreesByPrice(this.state.value);
     });
   }
 
@@ -14,7 +14,7 @@ class SearchTrees extends Component {
     return (
       <input
         type="text"
-        placeholder="Search by name..."
+        placeholder="Search by your budget..."
         name="name"
         onChange={ this.onChangeHandler }
         className="Search-Tree-Input"
@@ -23,4 +23,4 @@ class SearchTrees extends Component {
   }
 }
 
-export default SearchTrees;
+export default FilterTreesByPrice;

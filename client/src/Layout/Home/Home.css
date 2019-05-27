@@ -9,11 +9,11 @@
 .Search-Bar {
   display: flex;
   justify-content: center;
+  padding-left: 20px;
 }
 
 .Filter-Bar {
-  display: flex;
-  justify-content: right;
+  margin-top: -20px;
 }
 
 .No-Trees {
@@ -27,4 +27,15 @@
   justify-content: center; 
   height: 100vh;
   align-items: center;
+}
+
+/* Mobile View */
+@media (max-width: 42em) {
+  .Home-Wrapper {
+    margin-left: -6%;
+  }
+}
+
+span {
+  width: 20px;
 }

@@ -1,0 +1,13 @@
+.LandscapeMockup-Wrapper {
+	min-height: 100vh;
+	float: center;
+	background-image: url("landscapeMockup.jpg");
+}
+
+.Title {
+	margin: 5% 0 2% 10%;
+}
+
+.Button-Padding {
+	margin: 5% 0 2% 50%;
+}

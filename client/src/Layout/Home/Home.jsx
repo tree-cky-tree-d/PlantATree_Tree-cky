@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import "./Home.css";
 import axios from "axios";
 import { GridLoader } from 'react-spinners';
-import { MDBContainer } from "mdbreact";
+import { MDBContainer, MDBRow } from "mdbreact";
 
 
 // Components
 import Tree from "../../components/Tree/Tree";
 import SearchTrees from "../../components/SearchTrees/SearchTrees";
-import Filter from "../../components/Filter/Filter";
+import FilterTreesByCategory from "../../components/FilterTreesByCategory/FilterTreesByCategory";
+import FilterTreesByPrice from "../../components/FilterTreesByPrice/FilterTreesByPrice";
 import Carousel from "../Carousel/Carousel";
 
 class Home extends Component {
@@ -27,7 +28,7 @@ class Home extends Component {
     }
   }
 
-  removeUser = async id => {
+  removeTrees = async id => {
     try {
       // const treeRemoved = await axios.delete(`/api/trees/${id}`);
       const trees = await axios("/api/trees/");
@@ -40,6 +41,7 @@ class Home extends Component {
   searchTrees = async treename => {
     let allTrees = [...this.state.data.trees];
     if (this.state.allTrees === null) this.setState({ allTrees });
+
     let trees = this.state.data.trees.filter(({ name }) =>
       name.toLowerCase().includes(treename.toLowerCase())
     );
@@ -49,19 +51,32 @@ class Home extends Component {
       this.setState({ data: { trees: this.state.allTrees } });
   };
 
-  filter = async treename => {
+  FilterTreesByCategory = async treecategory => {
+    let allTrees = [...this.state.data.trees];
+
+    if (this.state.allTrees === null) this.setState({ allTrees });
+
+    let trees = this.state.data.trees.filter(({ category }) =>
+      category.toLowerCase().includes(treecategory.toLowerCase())
+    );
+    if (trees.length > 0) this.setState({ data: { trees } });
+
+    if (treecategory.trim() === "")
+      this.setState({ data: { trees: this.state.allTrees } });
+  };
+
+  FilterTreesByPrice = async treeprice => {
     let allTrees = [...this.state.data.trees];
     if (this.state.allTrees === null) this.setState({ allTrees });
-    alert(`You chose the ${this.Filter.radio} pizza.`);
-    let trees = this.state.data.trees.filter(({ name }) =>
-      name.toLowerCase().includes(treename.toLowerCase())
+
+    let trees = this.state.data.trees.filter(({ price }) =>
+      price <= treeprice
     );
     if (trees.length > 0) this.setState({ data: { trees } });
 
-    if (treename.trim() === "")
+    if (treeprice.trim() === "")
       this.setState({ data: { trees: this.state.allTrees } });
   };
-
 
 
   render() {
@@ -92,9 +107,12 @@ class Home extends Component {
             error amet numquam iure provident voluptate esse quasi, veritatis
             totam voluptas nostrum quisquam eum porro a pariatur veniam.
           </p>
-          <SearchTrees className="Search-Bar" SearchTrees={this.searchTrees} />
-        
-          <Filter className="Filter-Bar" Filter={this.Filter} />
+          <h5>Filter By:</h5>
+          <MDBRow>
+            <SearchTrees className="Search-Bar" SearchTrees={this.searchTrees} /><span />
+            <FilterTreesByPrice className="Search-Bar" FilterTreesByPrice={this.FilterTreesByPrice} /><span />
+            <FilterTreesByCategory FilterTreesByCategory={this.FilterTreesByCategory} />
+          </MDBRow>
           <MDBContainer>
               {trees}
           </MDBContainer>

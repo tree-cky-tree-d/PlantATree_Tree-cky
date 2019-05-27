@@ -7,12 +7,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(require('cors')());
 app.use(require('helmet')());
 
 app.use('/api/trees', require('./routes/trees'));
 app.use('/api/cart', require('./routes/cart'));
+app.use('/api/payment', require('./routes/payment'));
 
 // Production
 if (process.env.NODE_ENV === 'production') {
