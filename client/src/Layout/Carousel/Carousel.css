@@ -1,0 +1,9 @@
+.Carousel-Image {
+	height: 100vh;
+}
+
+.Carousel-Wrapper {
+	margin-top: -60px;
+	display: relative;
+	z-index: -99;
+}

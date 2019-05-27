@@ -27,6 +27,9 @@ class Navbar extends Component {
               <MDBNavItem>
                 <MDBNavLink to="/add">Add</MDBNavLink>
               </MDBNavItem>
+              <MDBNavItem>
+                <MDBNavLink to="/about">About</MDBNavLink>
+              </MDBNavItem>
             </MDBNavbarNav>
 
             <MDBNavbarNav right>

@@ -24,7 +24,7 @@ const Tree = ({
           className="Product-Image"
           src={ imageURL }
           top
-          alt="sample photo"
+          alt="Tree Photo"
           overlay="white-slight"
         />
         <MDBCardBody className="text-center">

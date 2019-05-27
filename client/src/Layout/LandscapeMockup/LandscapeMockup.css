@@ -2,6 +2,7 @@
 	min-height: 100vh;
 	float: center;
 	background-image: url("landscapeMockup.jpg");
+	overflow: hidden;
 }
 
 .Title {
