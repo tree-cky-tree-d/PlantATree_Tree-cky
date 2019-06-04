@@ -1,5 +1,7 @@
 # PlantATree
 
+Demo: http://treecky.herokuapp.com/
+
 ## Install Dependencies:
 Open cmd terminal
 npm install
